@@ -23,6 +23,7 @@ class TambahDaftar : AppCompatActivity() {
     private lateinit var _etJumlah: EditText
     private lateinit var _btnTambah: Button
     private lateinit var _btnUpdate: Button
+    private lateinit var _etCatatan: EditText
 
     var tanggal = getCurrentDate()
     var DB = daftarBelanjaDB.getDatabase(this)
@@ -37,6 +38,7 @@ class TambahDaftar : AppCompatActivity() {
 
         _etItem = findViewById(R.id.etItem)
         _etJumlah = findViewById(R.id.etJumlah)
+        _etCatatan = findViewById(R.id.etCatatan)
         _btnTambah = findViewById(R.id.btnTambah)
         _btnUpdate = findViewById(R.id.btnUpdate)
 
@@ -100,6 +102,7 @@ class TambahDaftar : AppCompatActivity() {
                     isi_tanggal = tanggal,
                     isi_item = _etItem.text.toString(),
                     isi_jumlah = _etJumlah.text.toString(),
+                    isi_catatan = _etCatatan.text.toString(),
                     pilihid = iID
                 )
                 withContext(Dispatchers.Main) {

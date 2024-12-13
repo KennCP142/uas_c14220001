@@ -13,11 +13,14 @@ data class daftarBelanja(
     @ColumnInfo(name = "tanggal")
     var tanggal: String? = null,
 
-    @ColumnInfo(name = "item")
+    @ColumnInfo(name = "item") // berat badan
     var item: String? = null,
 
-    @ColumnInfo(name = "jumlah")
+    @ColumnInfo(name = "jumlah") // tekanan darah
     var jumlah: String? = null,
+
+    @ColumnInfo(name = "catatan")
+    var catatan: String? = null,
 
     @ColumnInfo(name = "status")
     var status: Int = 0,

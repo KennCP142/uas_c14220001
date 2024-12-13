@@ -9,11 +9,19 @@
     android:orientation="vertical"
     android:layout_margin="16dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TAMBAH DATA KESEHATAN"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+
     <EditText
         android:id="@+id/etItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama Item">
+        android:hint="Berat Badan">
 
     </EditText>
 
@@ -21,7 +29,15 @@
         android:id="@+id/etJumlah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Jumlah">
+        android:hint="Tekanan Darah">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/etCatatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Catatan">
 
     </EditText>
 

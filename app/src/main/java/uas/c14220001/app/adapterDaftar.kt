@@ -30,6 +30,7 @@ class adapterDaftar(private val daftarBelanja: MutableList<daftarBelanja>) :
         val _tv1: TextView = itemView.findViewById(R.id.tv1)
         val _tv2: TextView = itemView.findViewById(R.id.tv2)
         val _tv3: TextView = itemView.findViewById(R.id.tv3)
+        val _tv4: TextView = itemView.findViewById(R.id.tv4)
         val _btnEdit: ImageButton = itemView.findViewById(R.id.btnEdit)
         val _btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
     }
@@ -50,6 +51,7 @@ class adapterDaftar(private val daftarBelanja: MutableList<daftarBelanja>) :
         holder._tv1.text = daftar.tanggal
         holder._tv2.text = daftar.item
         holder._tv3.text = daftar.jumlah.toString()
+        holder._tv4.text = daftar.catatan
 
         holder._btnEdit.setOnClickListener {
             val intent = Intent(it.context, TambahDaftar::class.java)
@@ -69,7 +71,7 @@ class adapterDaftar(private val daftarBelanja: MutableList<daftarBelanja>) :
                     historyBarang(
                         tanggal = daftar.tanggal,
                         item = daftar.item,
-                        jumlah = daftar.jumlah
+                        jumlah = daftar.jumlah,
                     )
                 )
 
