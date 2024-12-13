@@ -9,29 +9,50 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Kesehatan"/>
-
+        android:text="Data Kesehatan"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Cari daftar belanja..."
+        android:queryHint="Cari berat badan"
         android:layout_margin="8dp"
         android:elevation="4dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/thin_rounded_box"/>
 
+    <Button
+        android:id="@+id/btnFirebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download / Upload Data Ke Firebase"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNotes"
-        android:layout_width="408dp"
-        android:layout_height="wrap_content"
-        android:paddingTop="35dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnFirebase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fabAdd"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
@@ -40,11 +61,8 @@
         android:clickable="true"
         android:layout_margin="16dp"
         android:src="@drawable/add"
-        tools:ignore="MissingConstraints"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabBtnHistory"

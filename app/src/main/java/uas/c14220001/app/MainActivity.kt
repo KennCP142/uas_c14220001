@@ -82,6 +82,12 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
+
+        val _btnfirebase = findViewById<Button>(R.id.btnFirebase)
+        _btnfirebase.setOnClickListener {
+            val intent = Intent(this, firebaseActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
